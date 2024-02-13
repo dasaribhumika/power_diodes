@@ -87,6 +87,115 @@ const Form = () => {
         case 'TO-92':
           lambda += 1;
           break;
+        case 'SOT-23':
+          lambda += 1;
+          break;
+        case 'SOT-143':
+          lambda += 1;
+          break;
+        case 'SOT-223':
+          lambda += 3.4;
+          break;
+        case 'SOT-323':
+          lambda += 0.8;
+          break;
+        case 'SOT-343':
+          lambda += 0.8;
+          break;
+        case 'SOT-346':
+          lambda += 1;
+          break;  
+        case 'SOT-363':
+          lambda += 0.8;
+          break;  
+        case 'SOT-457':
+          lambda += 1.1;
+          break;
+        case 'SOT-89':
+          lambda += 2;
+          break;
+        case 'SOT-32(TO-126)':
+          lambda += 5.3;
+          break;
+        case 'SOT-82':
+          lambda += 5.3;
+          break;
+        case 'DPACK (SOT428)':
+          lambda += 5.1;
+          break;
+        case 'D2PACK':
+          lambda += 5.7;
+          break;
+        case 'TO-220':
+          lambda += 5.7;
+          break;
+        case 'TO-218(SOT-93)':
+          lambda += 6.9;
+          break;
+        case 'TO-247':
+          lambda += 6.9;
+          break;
+        case 'ISOTOP':
+          lambda += 20;
+          break;
+        case 'SOT-90B(optocoupler)':
+          lambda += 4.1;
+          break;
+        case 'SO-8(optocoupler)':
+          lambda += 4.5;
+          break;
+        case 'DO-34(DO-204AG)':
+          lambda += 2.5;
+          break;
+        case 'DO-35(DO-204AH)':
+          lambda += 2.5;
+          break;
+        case 'DO-41(DO-204AL)(glass)':
+          lambda += 2.5;
+          break;
+        case 'DO-41(DO-204AL)(plastic)':
+          lambda += 1;
+          break;
+        case 'F 126':
+          lambda += 1;
+          break;
+        case 'micromelf':
+          lambda += 2.5;
+          break;
+        case 'SOD-80(minimelf)':
+          lambda += 2.5;
+          break;
+        case 'melf':
+          lambda += 5;
+          break;
+        case 'SOD-110':
+          lambda += 0.8;
+          break;
+        case 'SOD-123':
+          lambda += 1;
+          break;
+        case 'SOD-323':
+          lambda += 0.7;
+          break;
+        case 'SOD-523':
+          lambda += 0.5;
+          break;
+        case 'SMA':
+          lambda += 1.8;
+          break;
+        case 'SMB(DO-214)':
+          lambda += 2.4;
+          break;
+        case 'SMC(DO-215)':
+          lambda += 5.1;
+          break;
+        case 'DO-220':
+          lambda += 5.7;
+          break;
+        case 'SOD-15':
+          lambda += 5.1;
+          break;
+          
         default:
           break;
       }
@@ -210,6 +319,43 @@ const Form = () => {
         <option value="TO-18">TO-18</option>
         <option value="TO-39">TO-39</option>
         <option value="TO-92">TO-92</option>
+        <option value="SOT-23">SOT-23</option>
+        <option value="SOT-143">SOT-143</option>
+        <option value="SOT-223">SOT-223</option>
+        <option value="SOT-323">SOT-323</option>
+        <option value="SOT-343">SOT-343</option>
+        <option value="SOT-346">SOT-346</option>
+        <option value="SOT-363">SOT-363</option>
+        <option value="SOT-457">SOT-457</option>
+        <option value="SOT-89">SOT-89</option>
+        <option value="SOT-32(TO-126)">SOT-32(TO-126)</option>
+        <option value="SOT-82">SOT-82</option>
+        <option value="DPACK (SOT428)">DPACK (SOT428)</option>
+        <option value="D2PACK">D2PACK</option>
+        <option value="TO-220">TO-220</option>
+        <option value="TO-218(SOT-93)">TO-218(SOT-93)</option>
+        <option value="TO-247">TO-247</option>
+        <option value="ISOTOP">ISOTOP</option>
+        <option value="SOT-90B(optocoupler)">SOT-90B(optocoupler)</option>
+        <option value="SO-8(optocoupler)">SO-8(optocoupler)</option>
+        <option value="DO-34(DO-204AG)">DO-34(DO-204AG)</option>
+        <option value="DO-35(DO-204AH)">DO-35(DO-204AH)</option>
+        <option value="DO-41(DO-204AL)(glass)">DO-41(DO-204AL)(glass)</option>
+        <option value="DO-41(DO-204AL)(plastic)">DO-41(DO-204AL)(plastic)</option>
+        <option value="F 126">F 126</option>
+        <option value="micromelf">micromelf</option>
+        <option value="SOD-80(minimelf)">SOD-80(minimelf)</option>
+        <option value="melf">melf</option>
+        <option value="SOD-110">SOD-110</option>
+        <option value="SOD-123">SOD-123</option>
+        <option value="SOD-323">SOD-323</option>
+        <option value="SOD-523">SOD-523</option>
+        <option value="SMA">SMA</option>
+        <option value="SMB(DO-214)">SMB(DO-214)</option>
+        <option value="SMC(DO-215)">SMC(DO-215)</option>
+        <option value="DO-220">DO-220</option>
+        <option value="SOD-15">SOD-15</option>
+
       </select>
       <p>Enter πt value:</p>
       <input type="text" value={piTValue} onChange={(e) => setPiTValue(e.target.value)} />
