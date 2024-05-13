@@ -18,6 +18,8 @@ const Form = () => {
   const [tjValue, setTjValue] = useState('');
   const [missionProfilePhase, setMissionProfilePhase] = useState('');
   const [temperature, setTemperature] = useState('');
+  const [temperatureOptions, setTemperatureOptions] = useState([]);
+
 
   useEffect(() => {
     calculateLambdaValue();
@@ -235,21 +237,21 @@ const Form = () => {
 
   const updateTauIValue = () => {
     switch (temperature) {
-      case 'Temp 1':
+      case '32/27':
         if (missionProfilePhase === 'Motor Control') {
           setTauIValue('0.020');
         } else if (missionProfilePhase === 'Passenger Compartment') {
           setTauIValue('0.006');
         }
         break;
-      case 'Temp 2':
+      case '60/30':
         if (missionProfilePhase === 'Motor Control') {
           setTauIValue('0.015');
         } else if (missionProfilePhase === 'Passenger Compartment') {
           setTauIValue('0.046');
         }
         break;
-      case 'Temp 3':
+      case '85':
         if (missionProfilePhase === 'Motor Control') {
           setTauIValue('0.023');
         } else if (missionProfilePhase === 'Passenger Compartment') {
@@ -762,10 +764,14 @@ const Form = () => {
             </>
           )}
         </>
-      )}
-        
+      )}  
       <p>Enter ΔT value:</p>
-      <input type="text" value={deltaTValue} onChange={(e) => setDeltaTValue(e.target.value)} />
+      <select value={deltaTValue} onChange={(e) => setDeltaTValue(e.target.value)}>
+        <option value="">Select ΔT</option>
+        <option value="0">0</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+      </select>
       <p>Select Mission Profile Phase:</p>
       <select value={missionProfilePhase} onChange={handleMissionProfilePhaseChange}>
         <option value="">Select Mission Profile Phase</option>
@@ -775,9 +781,9 @@ const Form = () => {
       <p>Select Temperature:</p>
       <select value={temperature} onChange={handleTemperatureChange}>
         <option value="">Select Temperature</option>
-        <option value="Temp 1">Temp 1</option>
-        <option value="Temp 2">Temp 2</option>
-        <option value="Temp 3">Temp 3</option>
+        <option value="32/27">32/27</option>
+        <option value="60/30">60/30</option>
+        <option value="85">85</option>
       </select>
       <p>λ value:</p>
       <span style={{ fontStyle: 'oblique', color: 'red' }}>{lambdaValue}</span>
