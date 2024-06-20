@@ -3,7 +3,10 @@ import { useState } from 'react';
 import Form from './components/Form';
 import Form2 from './components/Form2';
 import Form6 from './components/Form6';
+<<<<<<< HEAD
 import Form7 from './components/Form7';
+=======
+>>>>>>> 139bc732b662c887a16a99767b2471234a95a93d
 
 
 function App() {
@@ -25,8 +28,12 @@ function App() {
         return <Form2 />;
       case 'form-3':
         return <Form6 />;
+<<<<<<< HEAD
       case 'form-4':
         return <Form7 />;
+=======
+     
+>>>>>>> 139bc732b662c887a16a99767b2471234a95a93d
       default:
         return <div>Page not found</div>;
     }
@@ -39,7 +46,10 @@ function App() {
           <li onClick={() => handlePageChange('form-1')}>Form-1</li>
           <li onClick={() => handlePageChange('form-2')}>Form-2</li>
           <li onClick={() => handlePageChange('form-3')}>Form-3</li>
+<<<<<<< HEAD
           <li onClick={() => handlePageChange('form-4')}>Form-4</li>
+=======
+>>>>>>> 139bc732b662c887a16a99767b2471234a95a93d
         </ul>
       </div>
       <div className="body">{renderPage()}</div>
