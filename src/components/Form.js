@@ -778,7 +778,6 @@ const Form = () => {
         <option value="Motor Control">Motor Control</option>
         <option value="Passenger Compartment">Passenger Compartment</option>
       </select>
-<<<<<<< HEAD
       <p>Select Phase:</p>
       <select >
         <option value="">Select Phase</option>
@@ -786,9 +785,6 @@ const Form = () => {
         <option value="Phase 2: 4 day light starts">Phase 2: 4 day light starts</option>
         <option value="Phase 3: Non-used vehicle">Phase 3: Non-used vehicle</option>
       </select>
-
-=======
->>>>>>> 139bc732b662c887a16a99767b2471234a95a93d
       <p>Select Temperature:</p>
       <select value={temperature} onChange={handleTemperatureChange}>
         <option value="">Select Temperature</option>
